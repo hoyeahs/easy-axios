@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axios</title>
+  </head>
+  <body>
+    <script src="../dist/easy-axios.js"></script>
+    <script>
+      const a = Axios.default.createInstance()
+      a.get('http://localhost:7001?id=12', {
+        withCredentials: false,
+        transformResponse: [
+          (res) => {
+            console.log(res.data)
+            return res.data
+          },
+        ],
+        timeout: 0,
+        cache: false,
+        params: { a: 1 },
+      })
+        .then((data) => {
+          document.write(`<h1>${data.test}</h1>`)
+        })
+        .catch((e) => {
+          console.log(e)
+        })
+
+      Axios.default
+        .get('http://localhost:7001', {
+          withCredentials: false,
+          transformResponse: [
+            (res) => {
+              console.log(res.data)
+              return res.data
+            },
+          ],
+          timeout: 0,
+          cache: false,
+          params: { a: 1 },
+        })
+        .then((data) => {
+          document.write(`<h1>${data.test}aaaa</h1>`)
+        })
+        .catch((e) => {
+          console.log(e)
+        })
+    </script>
+  </body>
+</html>

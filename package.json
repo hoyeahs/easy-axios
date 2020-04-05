@@ -1,0 +1,21 @@
+{
+  "name": "easy-axios",
+  "version": "1.0.0",
+  "description": "easy axios",
+  "main": "dist/easy-axios.js",
+  "scripts": {
+    "build": "cross-env TARGET=umd webpack"
+  },
+  "keywords": [
+    "http",
+    "promise",
+    "ajax"
+  ],
+  "author": "guoyanhao",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
