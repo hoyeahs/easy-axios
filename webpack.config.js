@@ -1,8 +1,6 @@
 const path = require('path')
 const target = process.env.TARGET
 
-console.log(target)
-
 function resolve(dirpath) {
   return path.resolve(__dirname, dirpath)
 }
